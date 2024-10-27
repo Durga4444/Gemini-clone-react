@@ -1,14 +1,11 @@
 .main{
     flex:1;
-
-
 }
 .main-container {
     display: flex;
     flex-direction: column; 
     align-items: center; 
     flex: 1;
-
 }
 .nav{
   display:flex;
@@ -27,11 +24,10 @@
 
 
 .main .greet{
-    margin:50px 0px;
-    font-size:56px;
+    font-size:50px;
     color:#c4c7c5;
     font-weight:500;
-    padding:20px;
+    padding:0px 20px;
 }
 .main .greet span{
  background:-webkit-linear-gradient(16deg,#4b50ff,#ff5546);   
@@ -69,8 +65,7 @@
 }
 
 .main .card:hover{
-    background-color:rgba(128, 128, 128, 0.927);
-}
+    background-color:#e2e6eb;}
 .main-bottom{
     width:100%;
     max-width:900px;
@@ -78,6 +73,7 @@
     margin:auto;
 }
 .search-box{
+    
   flex:1;
   display:flex;
   align-items:center;
@@ -86,9 +82,11 @@
   background-color:#f0f4f9;
   padding:10px 20px;
   border-radius:50px;
+  
 }
 .search-box input{
    flex:1;
+  
    background:transparent;
    border:none;
    outline:none;
@@ -111,4 +109,27 @@
     margin:15px auto;
     text-align:center;
     font-weight:300;
+}
+.result{
+    padding:0px 5%;
+    max-height:70vh;
+    overflow-y:scroll;
+}
+.result::-webkit-scrollbar{
+    display:none;
+}
+.result-title{
+    margin:40px 0px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+.result img{
+    width:40px;
+    border-radius:50%;
+}
+.result-data{
+    display:flex;
+    align-items:start;
+    gap:20px;
 }
