@@ -4,6 +4,7 @@ import { runChatSession } from "../gemini";
 export const Context = createContext();
 
 const ContextProvider = (props) => {
+  console.log(props);
   const [input, setInput] = useState("");
   const [recentPrompt, setRecentPrompt] = useState("");
   const [previousPrompt, setPreviousPrompt] = useState([]);
