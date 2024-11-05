@@ -140,15 +140,17 @@
     display:flex;
     flex-direction:column;
     gap:10px;
+    margin-bottom:20px;
 }
 .loader hr{
     border-radius:4px;
     border:none;
     width:100%;
-    background-color:#7cafe3;
-    background-color:linear-gradient(to right,#931569,#05002e,#ff9ecf);
+    background-color: #f6f7f8;
+background: linear-gradient(to right,#b1d5ee,#53b5e900,#9ed7ff);
     background-size:800px 50px;
-    height:20px;
+    height:18px;
+    
     animation:loader 3s infinite linear;
 }
 @keyframes loader{
