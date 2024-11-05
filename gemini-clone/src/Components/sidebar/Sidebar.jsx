@@ -5,7 +5,7 @@ import {assets} from '../../assets/assets'
 import { Context } from '../../../context/context'
 const Sidebar = () => {
     const [extended,setExtended] = useState(false)
-    const {onSent,previousPrompt,setRecentPrompt} = useContext(Context)
+    const {onSent,previousPrompt,setRecentPrompt,newChat} = useContext(Context)
     function toggleSidebar(){
            setExtended(!extended);
     }
@@ -21,7 +21,7 @@ const Sidebar = () => {
         <div className="top">
            <img onClick={toggleSidebar} className="menu" src={assets.menu_icon} alt="" />
 
-           <div className="new-chat">
+           <div onClick = {()=>newChat()}className="new-chat">
             <img src={assets.plus_icon}alt="" className="assets plus-icon" />
             {extended?<p>New Chat</p>:null} 
            </div>
@@ -30,7 +30,7 @@ const Sidebar = () => {
     
              {previousPrompt.map((item)=>{
                return (
-                  <div className="recent-entry">
+                  <div onClick={()=>loadPrompt(item)}className="recent-entry">
                   <img src={assets.message_icon} alt="" />
                   <p>{item.slice(0,18)}</p>
               </div>

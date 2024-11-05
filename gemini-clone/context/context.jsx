@@ -17,14 +17,20 @@ const delayPara=(index,nextWord)=>{
   setResultData(prev=>prev+nextWord)
  },10*index)       
 }
-
+ 
+const newChat = () =>{
+  setLoading(false);
+  setShowResult(false);
+}
   const onSent = async (prompt) => {
     setResultData("");
     setLoading(true);
     setShowResult(true);
-    setRecentPrompt(input);
-    setPreviousPrompt(prev=>[...prev,input])
-    const response = await runChatSession(prompt); 
+
+    setPreviousPrompt(prev=>[...prev,input]);
+    setRecentPrompt(input)
+    const response = await runChatSession(input); 
+   
     let responseArray = response.split("**")
     let newResponse="";
     for(let i=0;i<responseArray.length;i++)
@@ -58,6 +64,7 @@ const delayPara=(index,nextWord)=>{
     resultData,
     input,
     setInput,
+    newChat
   };
 
   return (

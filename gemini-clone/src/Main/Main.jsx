@@ -80,12 +80,13 @@ const Main = () => {
                 alt="Mic Icon"
                 onClick={() => handleIconClick("Activate voice input")}
               />
-              <img
+              {input?<img
                 className="send-icon"
                 src={assets.send_icon}
                 alt="Send Icon"
                 onClick={() => onSent(input)}
-              />
+              />:null}
+              
             </div>
           </div>
           <p className="bottom-info">
